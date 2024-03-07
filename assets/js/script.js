@@ -5,11 +5,11 @@ const getData = async () => {
     //bloque positivo
     try {
         const response = await fetch(url);
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
         // manejo de posibles errores
         if(response.status !== 404){
             const datos = await response.json();
-            console.log(datos);
+            // console.log(datos);
             //aqui en el bloque try (camino positivo) se llama a función que imprime la lista
             imprimir(datos);
         }else{
@@ -17,7 +17,7 @@ const getData = async () => {
         }
         //bloque error con alert desde el if que maneja los errores   
     } catch (err) {
-        console.log(err);
+        alert(err);
     }
 }
 
